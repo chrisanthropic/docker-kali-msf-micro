@@ -16,7 +16,7 @@ ADD ./init.sh /init.sh
 # Install stuff
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
-apt-get -y --force-yes install metasploit metasploit-framework
+apt-get -y --force-yes install metasploit metasploit-framework sudo
 
 # Strip out unused Metasploit modules
 RUN rm -rf /usr/share/metasploit-framework/modules/*
