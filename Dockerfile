@@ -19,7 +19,7 @@ RUN apt-get update && \
 apt-get -y --force-yes install metasploit metasploit-framework
 
 # Strip out unused Metasploit modules
-rm /usr/share/metasploit-framework/modules/*
+RUN rm -rf /usr/share/metasploit-framework/modules/*
 
 # Prepare the database
 RUN service postgresql start && \
